@@ -49,7 +49,6 @@ public class fieldCentric extends LinearOpMode {
         colorSensor2 = hardwareMap.colorSensor.get("colorSensor2");
 
         byte i = 0;
-        byte q = 0;
 
         boolean pidOn = true;
 
@@ -62,9 +61,12 @@ public class fieldCentric extends LinearOpMode {
             telemetry.addData("angle", Math.toDegrees(angle));
             telemetry.update();
 
-            if(gamepad1.options && q==0){
+            if(gamepad1.share){
                 imu.initialize(parameters);
+                slides.reset();
             }
+
+
 
 
             double y = -gamepad1.left_stick_y;
@@ -174,7 +176,6 @@ public class fieldCentric extends LinearOpMode {
 
                 }
             }
-
         }
     }
 }

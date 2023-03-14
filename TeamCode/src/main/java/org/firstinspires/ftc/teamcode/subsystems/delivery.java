@@ -115,6 +115,7 @@ public class delivery {
     public void reset(){
 
         liftRight.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        liftRight.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
     }
 }

@@ -94,6 +94,8 @@ public class SensorKLNavxMicro extends LinearOpMode {
 
         while (opModeIsActive()) {
 
+            
+
             // Read dimensionalized data from the gyro. This gyro can report angular velocities
             // about all three axes. Additionally, it internally integrates the Z axis to
             // be able to report an absolute angular Z orientation.
@@ -126,4 +128,5 @@ public class SensorKLNavxMicro extends LinearOpMode {
     String formatDegrees(double degrees){
         return String.format("%.1f", AngleUnit.DEGREES.normalize(degrees));
     }
+
 }
